@@ -1209,21 +1209,21 @@ label.tool-btn{cursor:pointer}
                 </div>
             </div>
 
-            <!-- TAB ANIME AI -->
-            <div id="anime" class="tab-pane">
-                <div class="features-grid" style="align-items:flex-start;align-content:flex-start;">
-                    <div class="feature-card" style="max-width:400px;flex:1 1 100%;">
-                        <div class="feature-content">
-                            <div class="feature-header"><div class="feature-icon"><i class="fa-solid fa-robot"></i></div><div class="feature-title">Anime AI</div></div>
-                            <div class="feature-desc">Asisten anime yang membantu mempermudah penggunaan dan jadi teman ngobrol kamu.</div>
-                        </div>
-                        <div class="feature-action">
-                            <span class="toggle-label">OFF</span>
-                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle" id="toggle-anime" onchange="toggleUI(this)"><span class="slider"></span></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+	            <!-- TAB ANIME AI -->
+	            <div id="anime" class="tab-pane">
+	                <div class="features-grid" style="align-items:flex-start;align-content:flex-start;">
+	                    <div class="feature-card" style="max-width:400px;flex:1 1 100%;">
+	                        <div class="feature-content">
+	                            <div class="feature-header"><div class="feature-icon"><i class="fa-solid fa-robot"></i></div><div class="feature-title">Anime AI</div></div>
+	                            <div class="feature-desc">Asisten anime yang membantu mempermudah penggunaan dan jadi teman ngobrol kamu.</div>
+	                        </div>
+	                        <div class="feature-action">
+	                            <span class="toggle-label">OFF</span>
+	                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle" id="toggle-anime" onchange="toggleUI(this)"><span class="slider"></span></label>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
 
             <!-- TAB ORDER -->
             <div id="order" class="tab-pane">
@@ -1494,6 +1494,27 @@ function fpsSwitch(cb) {
     } else fpsNative(real, false);
 }
 // ================= FUNGSI UI TOGGLE UMUM =================
+function startAnimeAI() {
+    try {
+        if (window.GGMPAnimeAI && typeof window.GGMPAnimeAI.start === 'function') {
+            window.GGMPAnimeAI.start();
+            if (typeof showToast === 'function') showToast('Anime AI diaktifkan', false, 2200);
+        } else if (typeof showToast === 'function') {
+            showToast('Anime AI hanya tersedia dari aplikasi GGMP', true, 3000);
+        }
+    } catch (e) {
+        if (typeof showToast === 'function') showToast('Anime AI gagal dijalankan', true, 3000);
+    }
+}
+
+function stopAnimeAI() {
+    try {
+        if (window.GGMPAnimeAI && typeof window.GGMPAnimeAI.stop === 'function') {
+            window.GGMPAnimeAI.stop();
+        }
+    } catch (e) {}
+}
+
 function toggleUI(checkbox) {
     const label = checkbox.closest('.feature-action').querySelector('.toggle-label');
     if (label) {
@@ -1502,6 +1523,10 @@ function toggleUI(checkbox) {
     }
 
     if (checkbox.id === 'toggle-fps-real' || checkbox.id === 'toggle-fps-fake') fpsSwitch(checkbox);
+    if (checkbox.id === 'toggle-anime') {
+        if (checkbox.checked) startAnimeAI();
+        else stopAnimeAI();
+    }
 }
 
 // ================= UPDATE STATUS PANEL UTAMA =================
