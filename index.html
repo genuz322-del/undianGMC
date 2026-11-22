@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>
-:root{--ac-rgb:0,240,255;--ac2:#0050ff;--ac3-rgb:0,191,255;--neon-blue:rgb(var(--ac-rgb));--neon-blue-glow:rgba(var(--ac-rgb),.3);--glass-bg:rgba(0,10,30,.25);--glass-border:rgba(var(--ac-rgb),.3);--card-bg:rgba(0,15,40,.3);--text-main:#fff;--text-muted:#9bc1e0}
+:root{--ac-rgb:233,181,79;--ac2:#b9821f;--ac3-rgb:246,217,138;--neon-blue:rgb(var(--ac-rgb));--neon-blue-glow:rgba(var(--ac-rgb),.3);--glass-bg:rgba(0,10,30,.25);--glass-border:rgba(var(--ac-rgb),.3);--card-bg:rgba(0,15,40,.3);--text-main:#fff;--text-muted:#9bc1e0}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#000;color:var(--text-main);height:100vh;width:100vw;display:flex;justify-content:center;align-items:center;overflow:hidden}
 
@@ -718,6 +718,288 @@ label.tool-btn{cursor:pointer}
 .tp-foot{display:flex;align-items:center;gap:10px;font-size:12px}
 .tp-prev{width:34px;height:22px;border-radius:6px;background:var(--neon-blue);box-shadow:0 0 10px var(--neon-blue-glow);flex-shrink:0}
 .tp-foot b{font-family:'Rajdhani',sans-serif;letter-spacing:1px;flex:1}
+/* =====================================================================
+   TEMA V2 - MALAM DI LAUT
+   navy + teal (air) + emas antik (bajak laut) + kayu
+   ===================================================================== */
+:root{
+  --gold:rgb(var(--ac-rgb));
+  --gold-2:rgb(var(--ac3-rgb));
+  --gold-deep:var(--ac2);
+  --gold-glow:rgba(var(--ac-rgb),.35);
+  --crimson:#c0392b;
+  --parch:#f6ecd2;
+  --glass-bg:rgba(4,18,34,.5);
+  --card-bg:rgba(6,30,50,.62);
+  --text-main:#f3ecd8;
+  --text-muted:#aec8cf;
+
+  --star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='200'%3E%3Cg fill='%23fff' fill-opacity='.85'%3E%3Ccircle cx='20' cy='30' r='1'/%3E%3Ccircle cx='70' cy='12' r='.8'/%3E%3Ccircle cx='120' cy='60' r='1.2'/%3E%3Ccircle cx='180' cy='25' r='.9'/%3E%3Ccircle cx='230' cy='70' r='1'/%3E%3Ccircle cx='40' cy='110' r='.8'/%3E%3Ccircle cx='95' cy='140' r='1'/%3E%3Ccircle cx='150' cy='100' r='.8'/%3E%3Ccircle cx='210' cy='150' r='1.2'/%3E%3Ccircle cx='250' cy='20' r='.8'/%3E%3Ccircle cx='12' cy='170' r='.9'/%3E%3Ccircle cx='130' cy='185' r='.8'/%3E%3Ccircle cx='190' cy='190' r='1'/%3E%3Ccircle cx='60' cy='65' r='.7'/%3E%3C/g%3E%3C/svg%3E");
+  --gull:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 10'%3E%3Cpath d='M1 8Q6 1 12 7Q18 1 23 8' fill='none' stroke='%23ece6d2' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  --isle:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 36'%3E%3Cpath d='M0 36Q10 22 24 24Q34 14 46 22Q56 12 66 20Q80 18 90 36Z' fill='%23041423'/%3E%3Crect x='54' y='7' width='4' height='15' fill='%23041423'/%3E%3Cpath d='M53 7h6l-3-4z' fill='%23041423'/%3E%3C/svg%3E");
+  --tisle:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 50'%3E%3Cpath d='M0 50Q10 34 30 32Q48 32 60 50Z' fill='%23c9a45c'/%3E%3Cpath d='M0 50Q10 40 30 38Q48 38 60 50Z' fill='%23a8843f' fill-opacity='.55'/%3E%3Cpath d='M20 36Q24 24 22 14' stroke='%236b4423' stroke-width='2.4' fill='none'/%3E%3Cg stroke='%232f7d4f' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Cpath d='M22 14Q12 8 6 14'/%3E%3Cpath d='M22 14Q16 4 10 5'/%3E%3Cpath d='M22 14Q28 4 36 8'/%3E%3Cpath d='M22 14Q30 10 36 17'/%3E%3C/g%3E%3Crect x='36' y='30' width='11' height='7' fill='%23744a22' stroke='%23e9b54f' stroke-width='.8'/%3E%3Cpath d='M36 30Q41.5 24 47 30Z' fill='%238a5a2b' stroke='%23e9b54f' stroke-width='.8'/%3E%3Ccircle cx='41.5' cy='32.5' r='1' fill='%23e9b54f'/%3E%3Cpath d='M10 42l6 6M16 42l-6 6' stroke='%23c0392b' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  --w1:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 100 350 20 600 60C850 100 1050 20 1200 60V120H0Z' fill='%23227a8c' fill-opacity='.5'/%3E%3Cpath d='M0 60C150 100 350 20 600 60C850 100 1050 20 1200 60' fill='none' stroke='%23bff6ee' stroke-opacity='.35' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  --w2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 20 350 100 600 60C850 20 1050 100 1200 60V120H0Z' fill='%230e5870' fill-opacity='.8'/%3E%3Cpath d='M0 60C150 20 350 100 600 60C850 20 1050 100 1200 60' fill='none' stroke='%238fe1d5' stroke-opacity='.25' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  --w3:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0 60C150 100 350 20 600 60C850 100 1050 20 1200 60V120H0Z' fill='%23052a42'/%3E%3Cpath d='M0 60C150 100 350 20 600 60C850 100 1050 20 1200 60' fill='none' stroke='%2370c9c0' stroke-opacity='.22' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+}
+
+/* ---------- Dasar ---------- */
+body{background:#020a16;color:var(--text-main)}
+.bg-container{
+  background:linear-gradient(180deg,#040b1d 0%,#0a2347 32%,#154b68 50%,#b8834f 58.4%,#0e4a63 60%,#073049 76%,#021525 100%);
+  animation:none;transform:none;will-change:auto;
+}
+.bg-overlay{background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(0,5,14,.5) 100%)}
+
+/* ---------- Adegan laut (latar) ---------- */
+.sea{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;transition:opacity 1.4s ease}
+body:not(.ready) .sea{opacity:0}
+body:not(.ready) .sea *,body:not(.ready) .sea *::before,body:not(.ready) .sea *::after{animation-play-state:paused}
+
+.stars{position:absolute;left:0;right:0;top:0;height:60%;background:var(--star) 0 0/260px 200px;animation:twinkle 4.5s ease-in-out infinite alternate;will-change:opacity}
+.stars.s2{background:var(--star) 90px 60px/340px 260px;animation-duration:6.5s;animation-delay:-2s}
+@keyframes twinkle{from{opacity:.3}to{opacity:1}}
+
+.moon{position:absolute;top:9%;right:14%;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 34% 32%,#fffdf0 0,#f4e7b8 55%,#d8c48c 100%);box-shadow:inset -7px -5px 0 rgba(150,128,80,.28)}
+.moon::before{content:'';position:absolute;inset:-70px;border-radius:50%;background:radial-gradient(circle,rgba(255,232,160,.30) 0,rgba(255,232,160,.10) 38%,transparent 68%);animation:moonGlow 7s ease-in-out infinite alternate;will-change:transform,opacity}
+.moon::after{content:'';position:absolute;left:38%;top:52%;width:9px;height:9px;border-radius:50%;background:rgba(150,128,80,.25);box-shadow:-14px -10px 0 -1px rgba(150,128,80,.2),10px -14px 0 -2px rgba(150,128,80,.18)}
+@keyframes moonGlow{from{opacity:.65;transform:scale(.94)}to{opacity:1;transform:scale(1.07)}}
+
+.cloud{position:absolute;left:0;height:34px;width:190px;background:radial-gradient(ellipse at 50% 55%,rgba(170,200,226,.22),rgba(170,200,226,.07) 55%,transparent 72%);will-change:transform;animation:cloud 90s linear infinite}
+.cloud.c1{top:15%}
+.cloud.c2{top:30%;width:240px;height:40px;animation-duration:120s;animation-delay:-50s;opacity:.8}
+.cloud.c3{top:42%;width:160px;animation-duration:75s;animation-delay:-20s;opacity:.7}
+@keyframes cloud{from{transform:translate3d(-260px,0,0)}to{transform:translate3d(calc(100vw + 60px),0,0)}}
+
+.gull{position:absolute;left:0;top:20%;width:28px;height:12px;opacity:.85;will-change:transform;animation:gull 28s linear infinite}
+.gull::before{content:'';position:absolute;inset:0;background:var(--gull) center/contain no-repeat;animation:flap .55s ease-in-out infinite alternate}
+.gull.g2{top:27%;width:20px;height:9px;animation-duration:36s;animation-delay:-14s;opacity:.65}
+@keyframes gull{from{transform:translate3d(-40px,0,0)}to{transform:translate3d(calc(100vw + 40px),-30px,0)}}
+@keyframes flap{from{transform:scaleY(1)}to{transform:scaleY(.35)}}
+
+.isle{position:absolute;left:5%;top:calc(60% - 34px);width:90px;height:36px;background:var(--isle) bottom/contain no-repeat}
+.isle::after{content:'';position:absolute;left:60%;top:11%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 8px 3px rgba(255,233,168,.8);animation:lamp 3.2s ease-in-out infinite}
+@keyframes lamp{0%,100%{opacity:.25}50%{opacity:1}}
+
+.mist{position:absolute;left:0;right:0;top:calc(60% - 36px);height:70px;background:linear-gradient(transparent,rgba(190,220,230,.12),transparent);animation:mist 12s ease-in-out infinite alternate;will-change:opacity}
+@keyframes mist{from{opacity:.4}to{opacity:1}}
+
+/* ---------- Kapal ---------- */
+.bob{width:100%;height:100%;transform-origin:50% 88%;will-change:transform;animation:bob 4.6s ease-in-out infinite}
+.bob svg{width:100%;height:100%;display:block;overflow:visible}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1.8deg)}50%{transform:translateY(-3px) rotate(1.8deg)}}
+.bgship{position:absolute;left:0;top:calc(60% - 56px);width:112px;height:82px;will-change:transform;animation:bgsail 85s linear infinite -26s}
+@keyframes bgsail{from{transform:translate3d(-140px,0,0)}to{transform:translate3d(calc(100vw + 40px),0,0)}}
+
+/* ---------- Air & ombak berlapis ---------- */
+.water{position:absolute;left:0;right:0;top:60%;bottom:0}
+.water::after{content:'';position:absolute;left:0;right:0;bottom:0;height:60%;background:linear-gradient(transparent,rgba(1,10,22,.7));pointer-events:none}
+.moon-reflect{position:absolute;top:0;right:calc(14% + 2px);width:60px;height:62%;background:repeating-linear-gradient(180deg,rgba(255,236,170,.55) 0 2px,transparent 2px 8px);-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent);transform-origin:50% 0;animation:shimmer 3.4s ease-in-out infinite alternate;will-change:transform,opacity}
+@keyframes shimmer{from{transform:scaleX(.7);opacity:.5}to{transform:scaleX(1.1);opacity:.9}}
+
+.wv{position:absolute;left:0;right:0;will-change:transform}
+.wv i{position:absolute;left:0;top:0;width:200%;height:100%;background-repeat:repeat-x;background-size:25% 100%;will-change:transform;animation:wslide 30s linear infinite}
+.wv.w3::after{content:'';position:absolute;left:0;right:0;top:calc(100% - 2px);height:100vh;background:#052a42}
+@keyframes wslide{to{transform:translate3d(-50%,0,0)}}
+@keyframes bobA{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,4px,0)}}
+@keyframes bobB{0%,100%{transform:translate3d(0,3px,0)}50%{transform:translate3d(0,-3px,0)}}
+
+.water .w1{top:-12px;height:54px;animation:bobA 7s ease-in-out infinite}
+.water .w1 i{background-image:var(--w1);background-size:50% 100%;animation-duration:38s}
+.water .w2{top:8px;height:66px;animation:bobB 6s ease-in-out infinite}
+.water .w2 i{background-image:var(--w2);animation-duration:26s;animation-direction:reverse}
+.water .w3{top:34px;height:84px;animation:bobA 5s ease-in-out infinite -1.5s}
+.water .w3 i{background-image:var(--w3);animation-duration:18s}
+
+/* Partikel: plankton bercahaya */
+.ptc{background:#9fe9df;box-shadow:0 0 6px rgba(120,230,215,.85)}
+
+/* ---------- Dashboard: bingkai kayu & emas ---------- */
+.dashboard{
+  border:1.5px solid rgba(var(--ac-rgb),.55);
+  background:linear-gradient(180deg,rgba(6,24,42,.52),rgba(3,14,28,.62));
+  box-shadow:0 0 0 3px rgba(58,35,18,.55),0 10px 40px rgba(0,0,0,.5),0 0 24px rgba(var(--ac-rgb),.16);
+}
+.dashboard::before{content:'';position:absolute;inset:6px;border:1px dashed rgba(var(--ac-rgb),.16);border-radius:11px;pointer-events:none}
+.dashboard::after{box-shadow:inset 0 0 30px rgba(var(--ac-rgb),.16)}
+
+header{
+  background:repeating-linear-gradient(90deg,transparent 0 78px,rgba(0,0,0,.18) 78px 80px),linear-gradient(180deg,rgba(84,54,27,.9),rgba(46,28,13,.92));
+  border-bottom:1px solid rgba(var(--ac-rgb),.6);
+}
+footer{
+  background:repeating-linear-gradient(90deg,transparent 0 78px,rgba(0,0,0,.18) 78px 80px),linear-gradient(180deg,rgba(46,28,13,.92),rgba(70,44,21,.92));
+  border-top:1px solid rgba(var(--ac-rgb),.6);
+}
+header::after{background:linear-gradient(90deg,transparent,var(--gold-2),transparent)}
+.brand-icon{color:var(--gold-2);filter:none;text-shadow:0 0 10px var(--gold-glow)}
+.brand-text h1{font-family:'Cinzel','Rajdhani',serif;font-weight:700;color:var(--parch)}
+.brand-text p{color:#d6bd86}
+.status-dot{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.footer-status{color:var(--parch)}
+.footer-credit{color:#d6bd86}
+
+/* ---------- Font ---------- */
+.hero h2,.loader-title,.credit-title,.say,.stat-card .num,.tool-big,.loader-percentage{font-family:'Pirata One','Orbitron',serif;font-weight:400}
+.section-title{font-family:'Cinzel','Rajdhani',serif;font-weight:700}
+
+/* ---------- Menu ---------- */
+.nav-item{background:rgba(0,0,0,.22);border-color:rgba(var(--ac-rgb),.3);color:#e2d3ac}
+.nav-item:hover{background:rgba(var(--ac-rgb),.14);color:#fff}
+.nav-item.active{
+  background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));color:#2a1700;
+  border-color:var(--gold-2);box-shadow:0 2px 10px rgba(var(--ac-rgb),.35),inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+/* ---------- Home ---------- */
+.hero{background:radial-gradient(circle at 50% -10%,rgba(var(--ac-rgb),.2),transparent 65%),linear-gradient(180deg,rgba(8,36,58,.72),rgba(4,20,36,.72))}
+.hero::before{background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 10px var(--gold-glow)}
+.hero::after{background:linear-gradient(100deg,transparent,rgba(var(--ac3-rgb),.12),transparent)}
+.hero-photo::before{content:"\f14e";font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:50%;top:56%;font-size:170px;line-height:1;color:rgba(var(--ac-rgb),.09);transform:translate(-50%,-50%);animation:compassSpin 70s linear infinite;pointer-events:none;will-change:transform}
+@keyframes compassSpin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hp-img{position:relative;z-index:1;cursor:pointer;filter:drop-shadow(0 0 12px rgba(var(--ac-rgb),.35))}
+.hero-badge{color:#ffd9d2;border-color:rgba(192,57,43,.8);background:rgba(192,57,43,.2)}
+.hero-welcome{font-family:'Cinzel',serif;color:#d6bd86}
+.hero h2{color:var(--parch);letter-spacing:4px;font-size:clamp(26px,6vw,46px);text-shadow:0 2px 0 rgba(0,0,0,.4),0 0 24px rgba(var(--ac-rgb),.18)}
+.hero h2 span{background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+.hero-cta{background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));color:#2a1700;box-shadow:0 0 16px var(--gold-glow),inset 0 1px 0 rgba(255,255,255,.45)}
+.hero-cta::after{border-color:var(--gold)}
+.say{font-size:16px;letter-spacing:2px;color:#2a1700;background:linear-gradient(180deg,var(--gold-2),var(--gold));border:1px solid var(--gold-deep);box-shadow:0 0 14px var(--gold-glow)}
+.say::after{border-top-color:var(--gold)}
+
+.stat-card{background:linear-gradient(180deg,rgba(10,40,62,.7),rgba(5,24,40,.7))}
+.stat-card i,.quick-card .qh i,.tips li i,.feature-icon{color:var(--gold-2)}
+.stat-card .num{color:var(--parch)}
+.section-title{color:var(--gold-2)}
+.section-title::after{background:linear-gradient(90deg,rgba(var(--ac-rgb),.4),transparent)}
+.quick-card:hover,.feature-card:hover,.stat-card:hover{border-color:var(--gold);box-shadow:0 0 14px var(--gold-glow)}
+.tips,.status-panel{background:rgba(var(--ac-rgb),.06);border-left-color:var(--gold)}
+.step b{background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));color:#2a1700;box-shadow:0 0 10px var(--gold-glow)}
+.credit-card{background:radial-gradient(circle at 50% 0%,rgba(var(--ac-rgb),.16),transparent 70%),var(--card-bg)}
+.credit-title{background-image:linear-gradient(90deg,#fff,var(--gold-2),#fff)}
+.faq details[open]{border-color:var(--gold)}
+.faq summary::after{color:var(--gold-2)}
+.scroll-hint i{border-color:var(--gold);color:var(--gold-2);background:rgba(4,16,30,.9);box-shadow:0 0 12px var(--gold-glow)}
+.tab-pane{scrollbar-color:rgba(var(--ac-rgb),.45) transparent}
+
+/* ---------- Pelayaran (kemajuan fitur) ---------- */
+.voyage{--p:0;position:relative;flex-shrink:0;padding:10px 12px 11px;border:1px solid var(--glass-border);border-radius:12px;background:linear-gradient(180deg,rgba(10,38,60,.72),rgba(5,22,38,.74))}
+.vy-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+.vy-title{font-family:'Cinzel',serif;font-weight:700;font-size:12px;letter-spacing:2px;color:var(--gold-2);display:flex;align-items:center;gap:7px}
+.vy-title i{animation:compassSwing 6s ease-in-out infinite}
+@keyframes compassSwing{0%,100%{transform:rotate(-18deg)}50%{transform:rotate(18deg)}}
+.vy-info{font-size:10.5px;color:var(--text-muted);text-align:right}
+.vy-scene{position:relative;height:104px;border-radius:9px;overflow:hidden;border:1px solid rgba(var(--ac-rgb),.25);background:linear-gradient(180deg,#050c1f 0%,#0a2347 36%,#154b68 54%,#b8834f 62.6%,#0e4a63 63.5%,#073049 80%,#021525 100%);transition:box-shadow .8s ease}
+.vy-scene .stars{height:62%}
+.vy-scene .moon{top:10px;right:22%;width:20px;height:20px;box-shadow:inset -3px -2px 0 rgba(150,128,80,.28)}
+.vy-scene .moon::before{inset:-22px}
+.vy-scene .moon::after{display:none}
+.vy-scene .gull{top:14px}
+.vy-scene .isle{left:4px;top:auto;bottom:33px;width:64px;height:26px}
+.vy-tisle{position:absolute;right:2px;bottom:33px;width:62px;height:52px;background:var(--tisle) bottom/contain no-repeat}
+.vy-tisle::after{content:'';position:absolute;left:69%;top:62%;width:36px;height:36px;margin:-18px 0 0 -18px;background:radial-gradient(circle,rgba(255,226,140,.95),transparent 65%);opacity:0;transform:scale(.6)}
+.voyage.done .vy-tisle::after{opacity:1;animation:chestGlow 1.5s ease-in-out infinite alternate}
+.voyage.done .vy-scene{box-shadow:inset 0 0 24px rgba(var(--ac-rgb),.4)}
+@keyframes chestGlow{from{transform:scale(.8);opacity:.6}to{transform:scale(1.3);opacity:1}}
+.vy-ship{position:absolute;top:17px;width:88px;height:65px;left:calc(8px + var(--p,0) * (100% - 120px));transition:left 2.4s cubic-bezier(.4,.05,.2,1)}
+.vy-ship::after{content:'';position:absolute;left:-6px;bottom:9px;width:96px;height:7px;background:radial-gradient(ellipse at 50% 50%,rgba(255,255,255,.5),transparent 70%);animation:foam 1.8s ease-in-out infinite alternate}
+@keyframes foam{from{opacity:.3;transform:scaleX(.85)}to{opacity:.8;transform:scaleX(1.1)}}
+.vy-water{position:absolute;left:0;right:0;top:63%;bottom:0}
+.vy-water .w1{top:-5px;height:22px;animation:bobA 5s ease-in-out infinite}
+.vy-water .w1 i{background-image:var(--w1);background-size:50% 100%;animation-duration:22s}
+.vy-water .w2{top:2px;height:26px;animation:bobB 4.2s ease-in-out infinite}
+.vy-water .w2 i{background-image:var(--w2);animation-duration:15s;animation-direction:reverse}
+.vy-water .w3{top:12px;height:34px;animation:bobA 3.6s ease-in-out infinite -1s}
+.vy-water .w3 i{background-image:var(--w3);animation-duration:10s}
+.vy-bar{margin-top:8px;height:6px;border-radius:99px;background:rgba(0,0,0,.35);overflow:hidden;border:1px solid rgba(var(--ac-rgb),.25)}
+.vy-bar i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));transition:transform 1.4s var(--ease)}
+@media (min-aspect-ratio:4/3){#home .voyage{grid-column:2}.vy-scene{height:96px}}
+@media (min-aspect-ratio:4/3) and (max-height:480px){
+  .voyage{padding:6px 8px 7px}
+  .vy-head{margin-bottom:5px}
+  .vy-scene{height:62px}
+  .vy-ship{top:6px;width:58px;height:43px;left:calc(6px + var(--p,0) * (100% - 80px))}
+  .vy-ship::after{width:62px;bottom:6px}
+  .vy-scene .isle{bottom:20px;width:44px;height:18px}
+  .vy-tisle{bottom:20px;width:40px;height:33px}
+  .vy-bar{margin-top:5px;height:4px}
+  .hero-photo::before{font-size:110px}
+}
+
+/* ---------- Kartu fitur, toggle, tombol ---------- */
+.feature-action{border-top-color:rgba(var(--ac-rgb),.22)}
+.feature-icon{background:rgba(var(--ac-rgb),.12)}
+.slider{background:#0d2236;border-color:#2c4c66}
+.slider:before{background:#8fa9b6}
+input:checked+.slider{background:linear-gradient(90deg,#1f9c8e,var(--neon-blue));border-color:var(--neon-blue);box-shadow:0 0 8px var(--neon-blue-glow)}
+input:checked+.slider:before{background:#fff}
+.tool-row{border-bottom-color:rgba(var(--ac-rgb),.14)}
+.tool-big{color:var(--gold-2);text-shadow:0 0 12px var(--gold-glow)}
+.tool-btn{background:rgba(var(--ac-rgb),.1);border-color:rgba(var(--ac-rgb),.55);color:var(--gold-2)}
+.tool-btn:hover{background:var(--gold);color:#2a1700}
+.chip{background:rgba(var(--ac-rgb),.07)}
+.chip:hover{background:rgba(var(--ac-rgb),.16);border-color:var(--gold)}
+.ib{background:rgba(var(--ac-rgb),.07)}
+.ib:hover{border-color:var(--gold);color:var(--gold-2)}
+.ib.on{color:var(--gold-2);border-color:var(--gold);background:rgba(var(--ac-rgb),.18)}
+.ib.play{background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));color:#2a1700;box-shadow:0 0 16px var(--gold-glow)}
+.mp-tab{background:rgba(var(--ac-rgb),.06)}
+.mp-tab.active{background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));color:#2a1700;border-color:var(--gold-2);box-shadow:0 0 12px var(--gold-glow)}
+.mp-art,.ph{background:rgba(var(--ac-rgb),.1);color:var(--gold-2)}
+.mp-search i,.mp-vol i{color:var(--gold-2)}
+.touch-pad{border-color:var(--gold)}
+.touch-pad.active{background:rgba(var(--ac-rgb),.12);box-shadow:inset 0 0 20px var(--gold-glow)}
+.btn-reset{border-color:var(--gold);color:var(--gold-2);background:rgba(var(--ac-rgb),.1)}
+.btn-reset:hover{background:var(--gold);color:#2a1700}
+.mic-btn{border-color:var(--gold);color:var(--gold-2);background:rgba(var(--ac-rgb),.1)}
+.mic-btn.listening{background:var(--gold);color:#2a1700}
+#voice-toast{background:rgba(36,22,10,.96);border-color:var(--gold);color:var(--parch);box-shadow:0 0 18px var(--gold-glow)}
+.placeholder-content{border-color:rgba(var(--ac-rgb),.35)}
+.placeholder-content i{color:var(--gold-2)}
+
+/* Koin saat fitur dinyalakan */
+.coin{position:fixed;z-index:100001;pointer-events:none;font-size:15px;color:var(--gold-2);text-shadow:0 0 8px var(--gold-glow);animation:coinUp .95s ease-out forwards}
+@keyframes coinUp{0%{opacity:0;transform:translate(-50%,6px) scale(.6)}20%{opacity:1}100%{opacity:0;transform:translate(-50%,-38px) scale(1.15) rotate(25deg)}}
+
+/* Mode hemat: hentikan animasi latar */
+body.calm .sea *,body.calm .sea *::before,body.calm .sea *::after,body.calm .bg-particles *,body.calm .voyage *,body.calm .voyage *::before,body.calm .voyage *::after,body.calm .hero-photo::before{animation-play-state:paused!important}
+
+/* ---------- Loading: kapal berlayar di laut malam ---------- */
+.gate-door{background-image:linear-gradient(180deg,#040b1d 0%,#0a2347 32%,#154b68 50%,#b8834f 58.4%,#0e4a63 60%,#073049 76%,#021525 100%)}
+.ld-scene::before{background:radial-gradient(circle at 50% 46%,transparent 28%,rgba(2,8,20,.82) 100%)}
+.ld-center{margin-top:-18vh}
+.ld-ship{position:absolute;left:0;top:calc(60% - 76px);width:150px;height:110px;will-change:transform;animation:ldsail 6.5s cubic-bezier(.3,.2,.4,1) infinite}
+@keyframes ldsail{from{transform:translate3d(-170px,0,0)}to{transform:translate3d(calc(100vw + 30px),0,0)}}
+.gate-door::after{background:var(--gold-2);box-shadow:0 0 18px 3px var(--gold)}
+.loader-ring{border-top-color:var(--gold);border-bottom-color:var(--gold);box-shadow:0 0 20px var(--gold-glow)}
+.loader-ring.r2{border-top-color:var(--neon-blue);border-bottom-color:var(--neon-blue)}
+.loader-ring-inner{border-color:rgba(var(--ac-rgb),.6)}
+.loader-ring-wrapper::after{border-color:var(--gold)}
+.loader-icon{font-size:52px;color:var(--gold-2);text-shadow:0 0 16px var(--gold);animation:helm 9s linear infinite}
+@keyframes helm{to{transform:rotate(360deg)}}
+.loader-title{color:var(--parch);letter-spacing:7px;font-size:30px;text-shadow:0 0 12px var(--gold),0 0 26px var(--gold-glow)}
+.glitch::before{color:#ffcf6b}
+.glitch::after{color:#5fd8c8}
+.loader-subtitle{color:var(--gold-2);font-family:'Cinzel',serif}
+.loader-progress-track{border-color:rgba(var(--ac-rgb),.7)}
+.loader-progress-fill{background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));box-shadow:0 0 12px var(--gold-glow)}
+.loader-percentage{color:var(--parch);text-shadow:0 0 10px var(--gold)}
+
+@media (prefers-reduced-motion:reduce){
+  .sea *,.sea *::before,.sea *::after{animation:none!important}
+}
+
+
+/* ---------- Karakter chibi + topi bajak laut ---------- */
+.hero-photo{padding-top:44px}
+.crew{position:relative;display:inline-block;line-height:0;max-width:100%;transform-origin:50% 100%;will-change:transform;animation:charIn 1.2s var(--ease) backwards .25s,charSway 6s ease-in-out infinite 1.5s}
+body.settled .crew{animation:charSway 6s ease-in-out infinite}
+.crew .hp-img{animation:none!important;transform:none!important;will-change:auto;position:relative;z-index:1;cursor:pointer;filter:drop-shadow(0 0 12px rgba(var(--ac-rgb),.35))}
+.hat{position:absolute;z-index:2;left:50%;top:-8%;width:60%;transform:translate(-50%,0) rotate(-3deg);transform-origin:50% 100%;pointer-events:none;opacity:0;transition:opacity .5s ease}
+.hat.show{opacity:1}
+.hat svg{display:block;width:100%;height:auto;overflow:visible}
+@media (min-aspect-ratio:4/3) and (max-height:480px){.hero-photo{padding-top:30px}}
+
 </style>
 <script>
 (function () {
@@ -725,7 +1007,7 @@ label.tool-btn{cursor:pointer}
     window.hslToRgb = hsl;
     window.applyAccent = function (h, s, l) {
         const r = document.documentElement.style;
-        if (h === 182 && s === 100 && l === 50) { ['--ac-rgb', '--ac2', '--ac3-rgb'].forEach(k => r.removeProperty(k)); return; }
+        if (h === 40 && s === 78 && l === 61) { ['--ac-rgb', '--ac2', '--ac3-rgb'].forEach(k => r.removeProperty(k)); return; }
         const a = hsl(h, s, l), b = hsl((h + 38) % 360, s, Math.max(l - 2, 10)), c = hsl((h + 13) % 360, s, l);
         r.setProperty('--ac-rgb', a.join(',')); r.setProperty('--ac2', 'rgb(' + b.join(',') + ')'); r.setProperty('--ac3-rgb', c.join(','));
     };
@@ -735,21 +1017,53 @@ label.tool-btn{cursor:pointer}
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gSail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9c9a0"/><stop offset=".6" stop-color="#f4e8c6"/><stop offset="1" stop-color="#fff7e0"/></linearGradient>
+    <linearGradient id="gHull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a4426"/><stop offset="1" stop-color="#26150a"/></linearGradient>
+    <symbol id="ship" viewBox="0 0 136 100">
+      <path d="M68 8L8 46M68 8L134 49M100 22L134 49M40 28L8 46" stroke="#e8dcc0" stroke-opacity=".4" stroke-width=".6" fill="none"/>
+      <rect x="66.5" y="8" width="3" height="56" fill="#26150a"/>
+      <rect x="98.7" y="22" width="2.6" height="42" fill="#26150a"/>
+      <rect x="38.8" y="28" width="2.4" height="36" fill="#26150a"/>
+      <rect x="63" y="18.5" width="10" height="3" rx="1" fill="#3a2312"/>
+      <path d="M69.5 12C96 16 96 36 69.5 40Z" fill="url(#gSail)" stroke="#b9a878" stroke-width=".6"/>
+      <path d="M69.5 42C92 45 92 57 69.5 60Z" fill="url(#gSail)" stroke="#b9a878" stroke-width=".6"/>
+      <path d="M101 25C120 29 120 45 101 49Z" fill="url(#gSail)" stroke="#b9a878" stroke-width=".6"/>
+      <path d="M101 51C114 53 114 59 101 60Z" fill="url(#gSail)" stroke="#b9a878" stroke-width=".6"/>
+      <path d="M41 30C58 33 58 48 41 52Z" fill="url(#gSail)" stroke="#b9a878" stroke-width=".6"/>
+      <path d="M120 58L135 49" stroke="#26150a" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M6 62H122C118 76 106 86 90 88H40C22 86 10 76 6 62Z" fill="url(#gHull)"/>
+      <path d="M6 62L8 46H31V62Z" fill="#4a2e17"/>
+      <rect x="6" y="44.5" width="25" height="2.2" rx="1" fill="#e9b54f"/>
+      <path d="M6 62H122" stroke="#e9b54f" stroke-width="2"/>
+      <path d="M10 70H118M16 78H112" stroke="#000" stroke-opacity=".25" stroke-width=".8"/>
+      <g fill="#150b04"><rect x="44" y="67" width="5" height="4" rx=".8"/><rect x="58" y="67" width="5" height="4" rx=".8"/><rect x="72" y="67" width="5" height="4" rx=".8"/><rect x="86" y="67" width="5" height="4" rx=".8"/></g>
+      <g fill="#ffd27a"><circle cx="13" cy="54" r="1.7"/><circle cx="19" cy="54" r="1.7"/><circle cx="25" cy="54" r="1.7"/></g>
+      <circle cx="8" cy="41" r="2" fill="#ffd27a"><animate attributeName="opacity" values="1;.35;1" dur="2.2s" repeatCount="indefinite"/></circle>
+      <path d="M69 1.5L91 5L69 9.5Z" fill="#0b0b12"><animate attributeName="d" dur="1.3s" repeatCount="indefinite" values="M69 1.5L91 5L69 9.5Z;M69 1.5L90 3.5L69 9.5Z;M69 1.5L91 5L69 9.5Z"/></path>
+      <circle cx="75.5" cy="5.4" r="1.7" fill="#f4ecd8"/>
+    </symbol>
+  </defs>
+</svg>
+
 <div id="loading-screen">
     <div class="gate-door gate-l">
         <div class="ld-scene">
-            <div class="ld-grid"></div>
-            <div class="ld-scan"></div>
+            <div class="stars"></div><div class="stars s2"></div>
+            <div class="moon"></div>
+            <div class="ld-ship"><div class="bob"><svg viewBox="0 0 136 100"><use href="#ship" width="136" height="100"/></svg></div></div>
+            <div class="water"><div class="wv w1"><i></i></div><div class="wv w2"><i></i></div><div class="wv w3"><i></i></div></div>
             <div class="ld-particles" id="ld-particles"></div>
             <div class="ld-center">
                 <div class="loader-ring-wrapper">
                     <div class="loader-ring"></div>
                     <div class="loader-ring r2"></div>
                     <div class="loader-ring-inner"></div>
-                    <i class="fa-solid fa-rocket loader-icon"></i>
+                    <i class="fa-solid fa-dharmachakra loader-icon"></i>
                 </div>
-                <div class="loader-title glitch" data-text="VANZIX SYS">VANZIX SYS</div>
-                <div class="loader-subtitle js-status">INITIALIZING...</div>
+                <div class="loader-title glitch" data-text="KAPTEN VANZIX">KAPTEN VANZIX</div>
+                <div class="loader-subtitle js-status">MENGANGKAT JANGKAR...</div>
                 <div class="loader-progress-track"><div class="loader-progress-fill js-fill"></div></div>
                 <div class="loader-percentage js-pct">0%</div>
             </div>
@@ -758,6 +1072,19 @@ label.tool-btn{cursor:pointer}
 </div>
 
 <div class="bg-container"></div>
+<div class="sea" id="sea" aria-hidden="true">
+    <div class="stars"></div><div class="stars s2"></div>
+    <div class="moon"></div>
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+    <div class="gull g1"></div><div class="gull g2"></div>
+    <div class="isle"></div>
+    <div class="mist"></div>
+    <div class="bgship"><div class="bob"><svg viewBox="0 0 136 100"><use href="#ship" width="136" height="100"/></svg></div></div>
+    <div class="water">
+        <div class="moon-reflect"></div>
+        <div class="wv w1"><i></i></div><div class="wv w2"><i></i></div><div class="wv w3"><i></i></div>
+    </div>
+</div>
 <div class="bg-overlay"></div>
 <div class="bg-particles" id="bg-particles"></div>
 
@@ -765,7 +1092,7 @@ label.tool-btn{cursor:pointer}
 
     <header>
         <div class="brand">
-            <i class="fa-solid fa-rocket brand-icon"></i>
+            <i class="fa-solid fa-ship brand-icon"></i>
             <div class="brand-text">
                 <h1>SISTEM SETTINGS</h1>
                 <p>GGMP 3 Prem Vanzix</p>
@@ -794,24 +1121,59 @@ label.tool-btn{cursor:pointer}
             <div id="home" class="tab-pane active">
                 <div class="hero">
                     <div class="hero-photo">
-                        <div class="say-wrap"><div class="say">HAIII</div></div>
-                        <img class="hp-img" src="https://plain-apac-prod-public.komododecks.com/202611/15/GS9tMrQQ9Er4NIvPdPLh/image.png" alt="GGMP Vanzix" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">
+                        <div class="say-wrap"><div class="say" id="say">HAII</div></div>
+                        <div class="crew" id="crew">
+                            <img class="hp-img" src="https://plain-apac-prod-public.komododecks.com/202611/15/GS9tMrQQ9Er4NIvPdPLh/image.png" alt="GGMP Vanzix" referrerpolicy="no-referrer" onclick="tapCrew()" onload="window.placeHat&&placeHat();window.hatAnalyze&&hatAnalyze()" onerror="this.closest('.hero-photo').style.display='none'">
+                            <div class="hat" id="hat" aria-hidden="true">
+                            <svg viewBox="0 -10 124 70" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100 12C110 6 118 -1 120 -9C110 -7 102 -1 94 8Z" fill="#c0392b"/>
+                                <path d="M2 36C8 14 36 4 60 4C84 4 112 14 118 36C106 50 84 58 60 58C36 58 14 50 2 36Z" fill="#15111d"/>
+                                <path d="M10 34C26 24 44 20 60 20C76 20 94 24 110 34" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="2"/>
+                                <path d="M6 40C18 52 38 57 60 57C82 57 102 52 114 40" fill="none" stroke="#e9b54f" stroke-width="2.6" stroke-linecap="round"/>
+                                <path d="M47 16L73 38M73 16L47 38" stroke="#f4ecd8" stroke-width="3.4" stroke-linecap="round"/>
+                                <circle cx="47" cy="16" r="2" fill="#f4ecd8"/><circle cx="73" cy="16" r="2" fill="#f4ecd8"/><circle cx="47" cy="38" r="2" fill="#f4ecd8"/><circle cx="73" cy="38" r="2" fill="#f4ecd8"/>
+                                <circle cx="60" cy="25" r="9" fill="#f4ecd8"/>
+                                <rect x="54.5" y="30" width="11" height="6" rx="1.6" fill="#f4ecd8"/>
+                                <circle cx="56.3" cy="25" r="2.4" fill="#15111d"/><circle cx="63.7" cy="25" r="2.4" fill="#15111d"/>
+                                <path d="M60 27.5L58.6 30.4H61.4Z" fill="#15111d"/>
+                                <path d="M57.6 33.2V36M60 33.2V36M62.4 33.2V36" stroke="#15111d" stroke-width=".7"/>
+                            </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-badge"><i class="fa-solid fa-crown"></i> PREMIUM EDITION</div>
-                    <div class="hero-welcome">WELCOME TO</div>
+                    <div class="hero-badge"><i class="fa-solid fa-skull-crossbones"></i> CAPTAIN EDITION</div>
+                    <div class="hero-welcome">HAII, KAPTEN</div>
                     <h2>GGMP <span>BY VANZIX</span></h2>
                     <p>Pusat kontrol all-in-one untuk bikin HP lu makin kenceng saat gaming. Atur performa, sensitivitas, visual, dan grafik dalam satu dashboard yang simpel, rapi, dan tinggal sekali tap.</p>
-                    <button class="hero-cta" onclick="goTab('performance')"><i class="fa-solid fa-bolt"></i> MULAI OPTIMASI</button>
+                    <button class="hero-cta" onclick="goTab('performance')"><i class="fa-solid fa-anchor"></i> MULAI OPTIMASI</button>
                 </div>
 
                 <div class="home-stats">
                     <div class="stat-card"><i class="fa-solid fa-sliders"></i><div class="num" id="home-active">0</div><div class="lbl">FITUR AKTIF</div></div>
                     <div class="stat-card"><i class="fa-solid fa-layer-group"></i><div class="num" id="home-total">0</div><div class="lbl">TOTAL FITUR</div></div>
                     <div class="stat-card"><i class="fa-solid fa-gauge-high"></i><div class="num">120Hz</div><div class="lbl">STABILITY LOCK</div></div>
-                    <div class="stat-card"><i class="fa-solid fa-shield-halved"></i><div class="num">V1</div><div class="lbl">VERSI</div></div>
+                    <div class="stat-card"><i class="fa-solid fa-flag"></i><div class="num">V1</div><div class="lbl">VERSI</div></div>
                 </div>
 
-                <div class="section-title"><i class="fa-solid fa-star"></i> MENU UTAMA</div>
+                <div class="voyage" id="voyage">
+                    <div class="vy-head">
+                        <div class="vy-title"><i class="fa-solid fa-compass"></i> PELAYARAN</div>
+                        <div class="vy-info" id="vy-info">Berlabuh di pelabuhan · 0/0</div>
+                    </div>
+                    <div class="vy-scene">
+                        <div class="stars"></div>
+                        <div class="moon"></div>
+                        <div class="gull g1"></div>
+                        <div class="isle"></div>
+                        <div class="vy-tisle"></div>
+                        <div class="vy-ship" id="vy-ship"><div class="bob"><svg viewBox="0 0 136 100"><use href="#ship" width="136" height="100"/></svg></div></div>
+                        <div class="vy-water"><div class="wv w1"><i></i></div><div class="wv w2"><i></i></div><div class="wv w3"><i></i></div></div>
+                    </div>
+                    <div class="vy-bar"><i></i></div>
+                </div>
+
+
+                <div class="section-title"><i class="fa-solid fa-map"></i> MENU UTAMA</div>
                 <div class="quick-grid">
                     <div class="quick-card" onclick="goTab('performance')">
                         <div class="qh"><i class="fa-solid fa-microchip"></i> Performance</div>
@@ -831,7 +1193,7 @@ label.tool-btn{cursor:pointer}
                     </div>
                 </div>
 
-                <div class="section-title"><i class="fa-solid fa-lightbulb"></i> TIPS PENGGUNAAN</div>
+                <div class="section-title"><i class="fa-solid fa-scroll"></i> TIPS PENGGUNAAN</div>
                 <div class="tips">
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> Aktifkan semua toggle di menu Performance dulu sebelum mulai main.</li>
@@ -895,7 +1257,7 @@ label.tool-btn{cursor:pointer}
                         </div>
                         <div class="feature-action">
                             <span class="toggle-label">OFF</span>
-                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle performance-toggle" id="toggle-cleaner" onchange="updateStatus()"><span class="slider"></span></label>
+                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle performance-toggle" id="toggle-cleaner" onchange="updateStatus();coinPop(this)"><span class="slider"></span></label>
                         </div>
                     </div>
 
@@ -906,7 +1268,7 @@ label.tool-btn{cursor:pointer}
                         </div>
                         <div class="feature-action">
                             <span class="toggle-label">OFF</span>
-                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle performance-toggle" id="toggle-cpu" onchange="updateStatus()"><span class="slider"></span></label>
+                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle performance-toggle" id="toggle-cpu" onchange="updateStatus();coinPop(this)"><span class="slider"></span></label>
                         </div>
                     </div>
 
@@ -917,7 +1279,7 @@ label.tool-btn{cursor:pointer}
                         </div>
                         <div class="feature-action">
                             <span class="toggle-label">OFF</span>
-                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle performance-toggle" id="toggle-awake" onchange="updateStatus()"><span class="slider"></span></label>
+                            <label class="toggle-switch"><input type="checkbox" class="feature-toggle performance-toggle" id="toggle-awake" onchange="updateStatus();coinPop(this)"><span class="slider"></span></label>
                         </div>
                     </div>
                 </div>
@@ -972,6 +1334,16 @@ label.tool-btn{cursor:pointer}
                         <div class="feature-action">
                             <span class="toggle-label">OFF</span>
                             <label class="toggle-switch"><input type="checkbox" class="feature-toggle" onchange="toggleUI(this)"><span class="slider"></span></label>
+                        </div>
+                    </div>
+                                    <div class="feature-card">
+                        <div class="feature-content">
+                            <div class="feature-header"><div class="feature-icon"><i class="fa-solid fa-water"></i></div><div class="feature-title">Efek Laut</div></div>
+                            <div class="feature-desc">Animasi ombak, kapal, bintang, dan camar di latar. Matikan kalau HP terasa berat.</div>
+                        </div>
+                        <div class="feature-action">
+                            <span class="toggle-label" style="color:var(--neon-blue)">ON</span>
+                            <label class="toggle-switch"><input type="checkbox" class="sea-toggle" checked onchange="toggleUI(this);seaFx(this)"><span class="slider"></span></label>
                         </div>
                     </div>
                 </div>
@@ -1249,7 +1621,7 @@ label.tool-btn{cursor:pointer}
 <div id="theme-pop" class="theme-pop" hidden>
     <div class="tp-head"><b>Warna Aksen</b><button type="button" class="tp-x" id="tp-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button></div>
     <div class="tp-presets">
-        <button type="button" class="tp-dot" data-h="182" data-s="100" data-l="50" style="--c:#00f0ff" aria-label="Biru"></button>
+        <button type="button" class="tp-dot" data-h="40" data-s="78" data-l="61" style="--c:#e9b54f" aria-label="Emas (bawaan)"></button>
         <button type="button" class="tp-dot" data-h="277" data-s="100" data-l="74" style="--c:#c77dff" aria-label="Ungu"></button>
         <button type="button" class="tp-dot" data-h="349" data-s="100" data-l="65" style="--c:#ff4d6d" aria-label="Merah"></button>
         <button type="button" class="tp-dot" data-h="145" data-s="100" data-l="50" style="--c:#00ff6a" aria-label="Hijau"></button>
@@ -1305,7 +1677,7 @@ function syncGateScene() {
     setTimeout(syncGateScene, 600);
 })();
 
-const loadMsgs = [[0,'INITIALIZING...'],[20,'LOADING MODULES...'],[45,'OPTIMIZING SYSTEM...'],[70,'CONNECTING SERVICES...'],[90,'ALMOST READY...'],[100,'SYSTEM READY']];
+const loadMsgs = [[0,'MENGANGKAT JANGKAR...'],[20,'MENGISI MERIAM...'],[45,'MENGATUR LAYAR...'],[70,'MENCARI PULAU HARTA...'],[90,'HAMPIR BERLABUH...'],[100,'SIAP BERLAYAR!']];
 let lastLoadMsg = '';
 function setLoadStatus(p) {
     let m = loadMsgs[0][1];
@@ -1389,7 +1761,110 @@ function refreshHome() {
     all.forEach(t => { if (t.checked) on++; });
     document.getElementById('home-active').innerText = on;
     document.getElementById('home-total').innerText = all.length;
+    voyageUpdate(on, all.length);
 }
+
+// ================= PELAYARAN, KOIN, EFEK LAUT =================
+let vyLast = '';
+function voyageUpdate(on, total) {
+    const v = document.getElementById('voyage');
+    if (!v) return;
+    const key = on + '/' + total;
+    if (key === vyLast) return;
+    vyLast = key;
+    const p = total ? on / total : 0;
+    v.style.setProperty('--p', p.toFixed(3));
+    v.classList.toggle('done', total > 0 && on === total);
+    let t;
+    if (!on) t = 'Berlabuh di pelabuhan';
+    else if (p < 0.34) t = 'Jangkar diangkat';
+    else if (p < 0.67) t = 'Berlayar di laut lepas';
+    else if (p < 1) t = 'Pulau harta terlihat!';
+    else t = 'Harta karun ditemukan!';
+    document.getElementById('vy-info').textContent = t + ' · ' + on + '/' + total;
+}
+function coinPop(el) {
+    try {
+        if (!el.checked) return;
+        const box = el.closest('.toggle-switch');
+        if (!box) return;
+        const r = box.getBoundingClientRect();
+        if (!r.width) return;
+        const c = document.createElement('span');
+        c.className = 'coin';
+        c.innerHTML = '<i class="fa-solid fa-coins"></i>';
+        c.style.left = (r.left + r.width / 2) + 'px';
+        c.style.top = (r.top - 2) + 'px';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 950);
+    } catch (e) {}
+}
+function seaFx(cb) {
+    document.body.classList.toggle('calm', !cb.checked);
+    try { localStorage.setItem('seaFx', cb.checked ? '1' : '0'); } catch (e) {}
+}
+const crewWords = ['HAII', 'YARRR!', 'SIAP, KAPTEN!', 'GAS BERLAYAR!', 'HARTA KARUN!', 'DUAR!'];
+let crewI = 0;
+function tapCrew() {
+    const el = document.getElementById('say');
+    if (!el) return;
+    crewI = (crewI + 1) % crewWords.length;
+    el.textContent = crewWords[crewI];
+    el.style.animation = 'none';
+    void el.offsetWidth;
+    el.style.animation = 'sayCycle 8s ease-in-out -3.4s infinite';
+    if (navigator.vibrate) navigator.vibrate(25);
+}
+
+// ================= TOPI BAJAK LAUT: menyesuaikan kepala karakter =================
+const HAT = { fb: { cx: .5, top: .02, w: .56 }, geo: null };
+function placeHat() {
+    const img = document.querySelector('.crew .hp-img'), hat = document.getElementById('hat');
+    if (!img || !hat) return;
+    const W = img.clientWidth, H = img.clientHeight;
+    if (!W || !H) return;
+    const g = HAT.geo || HAT.fb;
+    const hw = Math.max(.4, Math.min(.85, g.w * 1.12)) * W;
+    const hh = hw / 1.771;
+    hat.style.width = hw + 'px';
+    hat.style.left = (g.cx * W) + 'px';
+    hat.style.top = (((g.top + .13) * H) - hh) + 'px';
+    hat.classList.add('show');
+}
+function hatAnalyze() {
+    const img = document.querySelector('.crew .hp-img');
+    if (!img || !img.naturalWidth || HAT.geo || HAT.busy) return;
+    HAT.busy = true;
+    const p = new Image();
+    p.crossOrigin = 'anonymous';
+    p.referrerPolicy = 'no-referrer';
+    p.onload = () => {
+        try {
+            const W = 96, H = Math.max(8, Math.round(W * p.naturalHeight / p.naturalWidth));
+            const c = document.createElement('canvas'); c.width = W; c.height = H;
+            const x = c.getContext('2d'); x.drawImage(p, 0, 0, W, H);
+            const d = x.getImageData(0, 0, W, H).data;
+            const A = (u, v) => d[(v * W + u) * 4 + 3];
+            let top = -1;
+            for (let v = 0; v < H && top < 0; v++) { let n = 0; for (let u = 0; u < W; u++) if (A(u, v) > 40) n++; if (n >= 2) top = v; }
+            if (top < 0) return;
+            const ys = Math.min(H - 1, top + Math.round(H * .16));
+            let L = W, R = -1;
+            for (let u = 0; u < W; u++) if (A(u, ys) > 40) { if (u < L) L = u; if (u > R) R = u; }
+            if (R < 0 || (top === 0 && (R - L) / W > .9)) return;
+            HAT.geo = { cx: (L + R) / 2 / W, top: top / H, w: (R - L) / W };
+            placeHat();
+        } catch (e) {}
+    };
+    p.src = img.currentSrc || img.src;
+}
+(function () {
+    const img = document.querySelector('.crew .hp-img');
+    if (!img) return;
+    addEventListener('resize', placeHat);
+    if ('ResizeObserver' in window) new ResizeObserver(placeHat).observe(img);
+    if (img.complete && img.naturalWidth) { placeHat(); hatAnalyze(); }
+})();
 
 // ================= LOGIKA METRIK PERFORMA =================
 let isPinging = false;
@@ -1527,6 +2002,8 @@ function toggleUI(checkbox) {
         if (checkbox.checked) startAnimeAI();
         else stopAnimeAI();
     }
+    if (checkbox.checked) coinPop(checkbox);
+    refreshHome();
 }
 
 // ================= UPDATE STATUS PANEL UTAMA =================
@@ -1611,7 +2088,8 @@ const voiceAliases = {
     'anime ai': ['anime'],
     'disable animations': ['disable', 'animasi', 'animation'],
     'fps stability lock': ['stability', 'stabilitas', 'lock', 'kunci', '120'],
-    'grafik mc': ['grafik', 'graphic', 'texture', 'tekstur']
+    'grafik mc': ['grafik', 'graphic', 'texture', 'tekstur'],
+    'efek laut': ['efek laut', 'ombak', 'laut']
 };
 
 const voiceTabs = {
@@ -2297,6 +2775,16 @@ function spToggleEmbed() {
 }
 spRender();
 
+// Pulihkan pengaturan Efek Laut
+(function () {
+    try {
+        if (localStorage.getItem('seaFx') === '0') {
+            const c = document.querySelector('.sea-toggle');
+            if (c) { c.checked = false; toggleUI(c); seaFx(c); }
+        }
+    } catch (e) {}
+})();
+
 // Tampilkan pesan jika ada error JavaScript (membantu mencari penyebab layar kosong)
 window.addEventListener('error', e => { try { showToast('Error: ' + e.message, true, 7000); } catch (x) {} });
 
@@ -2476,7 +2964,7 @@ function initMCGraphics() {
 try { initMCGraphics(); } catch (e) { console.error(e); }
 
 // ================= WARNA AKSEN BEBAS =================
-const ACC = { h: 182, s: 100, l: 50 };
+const ACC = { h: 40, s: 78, l: 61 };
 try { Object.assign(ACC, JSON.parse(localStorage.getItem('ggmpAccent')) || {}); } catch (e) {}
 function accUI() {
     document.getElementById('ac-h').value = ACC.h;
@@ -2498,7 +2986,7 @@ function accSet(h, s, l) {
     const read = () => accSet(+document.getElementById('ac-h').value, +document.getElementById('ac-s').value, +document.getElementById('ac-l').value);
     ['ac-h', 'ac-s', 'ac-l'].forEach(id => document.getElementById(id).addEventListener('input', read));
     document.querySelectorAll('.tp-dot').forEach(d => d.addEventListener('click', () => accSet(+d.dataset.h, +d.dataset.s, +d.dataset.l)));
-    document.getElementById('ac-reset').addEventListener('click', () => accSet(182, 100, 50));
+    document.getElementById('ac-reset').addEventListener('click', () => accSet(40, 78, 61));
     btn.addEventListener('click', () => { pop.hidden = !pop.hidden; });
     document.getElementById('tp-close').addEventListener('click', () => { pop.hidden = true; });
     document.addEventListener('click', e => { if (!pop.hidden && !pop.contains(e.target) && !btn.contains(e.target)) pop.hidden = true; });
