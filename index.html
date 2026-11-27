@@ -1813,9 +1813,9 @@ applySky();setInterval(applySky,60000);document.addEventListener('visibilitychan
                 <div class="order-box">
                     <div class="order-ico"><i class="fa-solid fa-bag-shopping"></i></div>
                     <h3 class="order-title">YANG MAU ORDER CUSTOM / JASA CHAT VANZIX AJA DULU</h3>
-                    <a class="order-btn wa" href="https://wa.me/6285753673138" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Vanzix</a>
-                    <a class="order-btn" href="https://whatsapp.com/channel/0029VbDBt0sG8l5L7EEaW614" target="_blank" rel="noopener"><i class="fa-solid fa-bullhorn"></i> Ikuti Saluran</a>
-                    <a class="order-btn" href="https://chat.whatsapp.com/LkJ8SXNqgrk3MXWUikNWG6?s=cl&amp;p=a&amp;iam=2" target="_blank" rel="noopener"><i class="fa-solid fa-user-group"></i> Mau pinter custom? Join GB sini</a>
+                    <a class="order-btn wa" href="https://wa.me/6285753673138" data-wa="send?phone=6285753673138" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Vanzix</a>
+                    <a class="order-btn" href="https://whatsapp.com/channel/0029VbDBt0sG8l5L7EEaW614" data-wa="channel/0029VbDBt0sG8l5L7EEaW614" rel="noopener"><i class="fa-solid fa-bullhorn"></i> Ikuti Saluran</a>
+                    <a class="order-btn" href="https://chat.whatsapp.com/LkJ8SXNqgrk3MXWUikNWG6?s=cl&amp;p=a&amp;iam=2" data-wa="chat?code=LkJ8SXNqgrk3MXWUikNWG6" rel="noopener"><i class="fa-solid fa-user-group"></i> Mau pinter custom? Join GB sini</a>
                 </div>
             </div>
 
@@ -3528,6 +3528,32 @@ async function pnGo() {
         const low = (navigator.deviceMemory && navigator.deviceMemory <= 3) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
         if (low && localStorage.getItem('seaFx') === null) { const c = document.querySelector('.sea-toggle'); if (c && c.checked) { c.checked = false; toggleUI(c); seaFx(c); } }
     } catch (e) {}
+})();
+</script>
+
+<script>
+/* Tombol WA / Saluran / GB di tab Order: langsung buka aplikasi WhatsApp, bukan Chrome */
+(function(){
+    const ua = navigator.userAgent || '';
+    const isAndroid = /Android/i.test(ua);
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    document.querySelectorAll('a[data-wa]').forEach(a => {
+        a.addEventListener('click', e => {
+            const path = a.getAttribute('data-wa');
+            const web = a.getAttribute('href');
+            if (isAndroid) {
+                e.preventDefault();
+                // intent: -> langsung ke app WA; kalau WA tidak terpasang baru jatuh ke link web
+                location.href = 'intent://' + path + '#Intent;scheme=whatsapp;S.browser_fallback_url=' + encodeURIComponent(web) + ';end';
+            } else if (isIOS) {
+                e.preventDefault();
+                location.href = 'whatsapp://' + path;
+            } else {
+                e.preventDefault();
+                window.open(web, '_blank', 'noopener');
+            }
+        });
+    });
 })();
 </script>
 </body>
